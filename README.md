@@ -1,5 +1,7 @@
 # mvc_php
 
+## Параметры для .env
+
 ### _Framework
 DEBUG=true  
 ENV=prod  
