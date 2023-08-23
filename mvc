@@ -1,0 +1,31 @@
+<?php
+
+if(php_sapi_name() !== 'cli')
+{
+    die("Может используется только в командной строке");
+}
+
+const CPATH = __DIR__.DIRECTORY_SEPARATOR;
+const ROOTPATH = __DIR__ . DIRECTORY_SEPARATOR;
+chdir(CPATH);
+
+$action = $argv[1] ?? 'help';
+
+require 'console' . DIRECTORY_SEPARATOR . 'init.php';
+
+$mvc = new \Console\Mvc();
+
+if(empty($action))
+{
+    call_user_func_array([$mvc, 'help'], []);
+} else {
+    $parts = explode(":", $action);
+
+    if (is_callable([$mvc, $parts[0]]))
+    {
+        call_user_func_array([$mvc, $parts[0]], [$argv[2] ?? '', $parts[1] ?? '']);
+    } else {
+        echo "\n\rЭта команда не была распознана. Пожалуйста ознакомтесь с командами консоли.\n\r";
+        call_user_func_array([$mvc, 'help'], []);
+    }
+}
