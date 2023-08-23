@@ -39,3 +39,22 @@ BACKEND_COOKIE_VALIDATION_KEY="backcookie"
 
 ADMIN_EMAIL=""  
 FROM_EMAIL=""  
+
+
+## Helper migration
+
+### Database  
+      db:create          Создайте новую схему базы данных.  
+      db:table           Извлекает информацию из выбранной таблицы  
+      db:drop            Удаление базы данных.  
+      migrate            Находит и запускает миграцию из указанной папки плагина.  
+      migrate:refresh    Выполняет откат последнего обновления для обновления текущего состояния базы данных.  
+      migrate:rollback   Запускает метод 'down' для отката последней операции миграции.  
+
+### Generators  
+      make:controller    Генерирует новый файл контроллера.  
+      make:model         Генерирует новый файл модели.  
+      make:migration     Создает новый файл миграции.   
+      
+### Другое  
+      list:migrations    Показывает все существующие файлы миграций.  
