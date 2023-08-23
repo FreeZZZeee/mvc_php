@@ -22,24 +22,9 @@ DB_TABLE_PREFIX=""
 FRONTEND_URL="http://mysyte/"  
 BACKEND_URL="/admin"  
 STORAGE_URL="/storage"  
-ENABLE_HTTPS=false  
-ENABLE_ENVIRONMENT_CHECK=true  
-
-### _Mail
-MAIL_HOST=""  
-MAIL_PORT=""  
-MAIL_PROTOCOL="tls"  
-MAIL_USERNAME=""  
-MAIL_PASSWORD=""  
 
 ### _Other
 SITE_NAME=""  
-FRONTEND_COOKIE_VALIDATION_KEY="frontcookie"  
-BACKEND_COOKIE_VALIDATION_KEY="backcookie"  
-
-ADMIN_EMAIL=""  
-FROM_EMAIL=""  
-
 
 ## Helper migration
 
